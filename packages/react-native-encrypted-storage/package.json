@@ -1,0 +1,25 @@
+{
+  "name": "@effector-storage/react-native-encrypted-storage",
+  "description": "Module for Effector to sync stores with ReactNative EncryptedStorage",
+  "version": "0.0.0",
+  "author": "Victor Didenko <yumaa.verdin@gmail.com> (https://yumaa.name)",
+  "keywords": [
+    "react native encryptedstorage",
+    "react native encrypted storage"
+  ],
+  "scripts": {
+    "build": "NODE_ENV=production rollup --config ../../rollup.config.mjs",
+    "build:dev": "rollup --config ../../rollup.config.mjs",
+    "check:lint": "eslint src --ext .ts --config ../../.eslintrc.json",
+    "check:types": "tsc --noEmit",
+    "check:format": "prettier --check src",
+    "check:spell": "yaspeller .",
+    "lint": "npm-run-all --parallel check:*",
+    "format": "prettier --write src",
+    "test": "vitest run --coverage",
+    "size": "size-limit --highlight-less"
+  },
+  "dependencies": {
+    "react-native-encrypted-storage": "^4.0.3"
+  }
+}

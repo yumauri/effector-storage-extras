@@ -1,0 +1,13 @@
+diff --git a/package.json b/package.json
+index cd08e9154ae38a7c6bc62f0617fc0776163a93e0..37844ee76278bb924eee3b5729a6d9951b4c7e89 100644
+--- a/package.json
++++ b/package.json
+@@ -2,7 +2,7 @@
+   "name": "react-native-encrypted-storage",
+   "version": "4.0.3",
+   "description": "A React Native wrapper over SharedPreferences and Keychain to provide a secure alternative to Async Storage",
+-  "main": "lib/commonjs/index",
++  "main": "lib/module/index",
+   "module": "lib/module/index",
+   "types": "lib/typescript/index.d.ts",
+   "react-native": "src/index",

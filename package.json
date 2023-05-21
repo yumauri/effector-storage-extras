@@ -1,0 +1,74 @@
+{
+  "name": "effector-storage-extras",
+  "description": "Extra adapters for effector-storage package",
+  "version": "0.0.0",
+  "author": "Victor Didenko <yumaa.verdin@gmail.com> (https://yumaa.name)",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yumauri/effector-storage-extras"
+  },
+  "bugs": {
+    "url": "https://github.com/yumauri/effector-storage-extras/issues"
+  },
+  "homepage": "https://github.com/yumauri/effector-storage-extras#readme",
+  "keywords": [
+    "effector",
+    "persist",
+    "storage"
+  ],
+  "private": true,
+  "scripts": {
+    "build": "nx run-many -t build",
+    "check:lint": "nx run-many -t check:lint",
+    "check:types": "nx run-many -t check:types",
+    "check:format": "nx run-many -t check:format",
+    "check:spell": "nx run-many -t check:spell",
+    "lint": "nx run-many -t lint",
+    "format": "nx run-many -t format",
+    "test": "nx run-many -t test",
+    "//test": "vitest run",
+    "size": "nx run-many -t size"
+  },
+  "dependencies": {
+    "effector": "^22.8.6",
+    "effector-storage": "^6.0.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.21.8",
+    "@babel/plugin-transform-block-scoping": "^7.21.0",
+    "@babel/preset-typescript": "^7.21.5",
+    "@nx/eslint-plugin": "^16.2.1",
+    "@rollup/plugin-babel": "^6.0.3",
+    "@rollup/plugin-node-resolve": "^15.0.2",
+    "@size-limit/preset-small-lib": "^8.2.4",
+    "@typescript-eslint/eslint-plugin": "^5.59.6",
+    "@typescript-eslint/parser": "^5.59.6",
+    "@vitest/coverage-c8": "^0.31.1",
+    "eslint": "^8.41.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-config-standard": "^17.0.0",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-n": "^16.0.0",
+    "eslint-plugin-promise": "^6.1.1",
+    "flowgen": "^1.21.0",
+    "npm-run-all": "^4.1.5",
+    "nx": "^16.2.1",
+    "prettier": "^2.8.8",
+    "rollup": "^3.22.0",
+    "rollup-plugin-command": "^1.1.3",
+    "rollup-plugin-dts": "^5.3.0",
+    "rollup-plugin-generate-package-json": "^3.2.0",
+    "rollup-plugin-terser": "^7.0.2",
+    "size-limit": "^8.2.4",
+    "typescript": "^5.0.4",
+    "vitest": "^0.31.1",
+    "yaspeller": "^8.0.1"
+  },
+  "packageManager": "pnpm@8.5.1",
+  "pnpm": {
+    "patchedDependencies": {
+      "react-native-encrypted-storage@4.0.3": "patches/react-native-encrypted-storage@4.0.3.patch"
+    }
+  }
+}
