@@ -4,7 +4,7 @@ Adapter to persist [_store_] using React Native [AsyncStorage].
 
 ## Preconditions
 
-`@effector-storage/react-native-async-storage` has dependency on `@react-native-async-storage/async-storage`, so it will autoinstall it.
+`@effector-storage/react-native-async-storage` has dependency on `@react-native-async-storage/async-storage`, so it will auto install it.
 
 But depending on your platform and React Native version, you might want to install [AsyncStorage] manually, because it might require linking.
 

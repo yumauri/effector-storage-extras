@@ -4,7 +4,7 @@ Adapter to persist [_store_] using React Native [EncryptedStorage].
 
 ## Preconditions
 
-`@effector-storage/react-native-encrypted-storage` has dependency on `react-native-encrypted-storage`, so it will autoinstall it.
+`@effector-storage/react-native-encrypted-storage` has dependency on `react-native-encrypted-storage`, so it will auto install it.
 
 But depending on your platform and React Native version, you might want to install [EncryptedStorage] manually, because it might require linking.
 
