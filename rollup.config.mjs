@@ -90,7 +90,8 @@ const src = () => ({
         license: ROOT_PACKAGE_JSON.license,
         repository: ROOT_PACKAGE_JSON.repository,
         bugs: ROOT_PACKAGE_JSON.bugs,
-        homepage: ROOT_PACKAGE_JSON.homepage,
+        homepage:
+          ROOT_PACKAGE_JSON.homepage + '/tree/main/packages/' + WORKSPACE_NAME,
         keywords: [...ROOT_PACKAGE_JSON.keywords, ...pkg.keywords],
         peerDependencies: {
           effector: '>=22.0.0',
