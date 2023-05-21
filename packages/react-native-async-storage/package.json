@@ -1,7 +1,7 @@
 {
   "name": "@effector-storage/react-native-async-storage",
   "description": "Module for Effector to sync stores with ReactNative AsyncStorage",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "author": "Victor Didenko <yumaa.verdin@gmail.com> (https://yumaa.name)",
   "keywords": [
     "react native asyncstorage",
