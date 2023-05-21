@@ -39,8 +39,8 @@ export interface Persist {
 /**
  * Creates `AsyncStorage` adapter
  */
-async.factory = true as const
-export function async(config?: AsyncStorageConfig): StorageAdapter {
+adapter.factory = true as const
+export function adapter(config?: AsyncStorageConfig): StorageAdapter {
   return asyncStorage({
     storage: () => AsyncStorage,
     ...config,
@@ -54,7 +54,7 @@ export function async(config?: AsyncStorageConfig): StorageAdapter {
 export function createPersist(defaults?: ConfigPersist): Persist {
   return (config) =>
     base({
-      adapter: async,
+      adapter,
       ...defaults,
       ...config,
     })

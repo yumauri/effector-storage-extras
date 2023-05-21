@@ -61,10 +61,10 @@ import { persist } from '@effector-storage/react-native-encrypted-storage'
 ## Adapter
 
 ```javascript
-import { encrypted } from '@effector-storage/react-native-encrypted-storage'
+import { adapter } from '@effector-storage/react-native-encrypted-storage'
 ```
 
-- `encrypted(options?): StorageAdapter`
+- `adapter(options?): StorageAdapter`
 
 ### Options
 

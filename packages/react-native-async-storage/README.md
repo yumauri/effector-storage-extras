@@ -61,10 +61,10 @@ import { persist } from '@effector-storage/react-native-async-storage'
 ## Adapter
 
 ```javascript
-import { async } from '@effector-storage/react-native-async-storage'
+import { adapter } from '@effector-storage/react-native-async-storage'
 ```
 
-- `async(options?): StorageAdapter`
+- `adapter(options?): StorageAdapter`
 
 ### Options
 

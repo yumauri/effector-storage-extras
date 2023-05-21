@@ -1,6 +1,6 @@
 import { vi, expect, test } from 'vitest'
 import { createStore } from 'effector'
-import { encrypted, persist } from '../src'
+import { adapter, persist } from '../src'
 
 // Mock `react-native`.NativeModules.RNEncryptedStorage
 // @see https://github.com/emeraldsanto/react-native-encrypted-storage/blob/master/src/__mocks__/react-native.js
@@ -21,7 +21,7 @@ vi.mock('react-native', () => {
 
 test('should export adapter and `persist` function', () => {
   expect(persist).toBeTypeOf('function')
-  expect(encrypted).toBeTypeOf('function')
+  expect(adapter).toBeTypeOf('function')
 })
 
 test('should be ok on good parameters', () => {

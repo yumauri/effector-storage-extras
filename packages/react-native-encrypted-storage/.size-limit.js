@@ -9,7 +9,7 @@ module.exports = [
   {
     name: 'cjs module',
     path: '../../build/packages/react-native-encrypted-storage/index.cjs',
-    limit: '329 B',
+    limit: '328 B',
     // import: '{ persist }', // tree-shaking is not working with cjs
     ignore: ['effector', 'effector-storage', 'react-native-encrypted-storage'],
   },

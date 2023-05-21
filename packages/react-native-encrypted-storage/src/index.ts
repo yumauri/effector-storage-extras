@@ -33,8 +33,8 @@ export interface Persist {
 /**
  * Creates `EncryptedStorage` adapter
  */
-encrypted.factory = true as const
-export function encrypted(config?: EncryptedStorageConfig): StorageAdapter {
+adapter.factory = true as const
+export function adapter(config?: EncryptedStorageConfig): StorageAdapter {
   return asyncStorage({
     storage: () => EncryptedStorage,
     ...config,
@@ -48,7 +48,7 @@ export function encrypted(config?: EncryptedStorageConfig): StorageAdapter {
 export function createPersist(defaults?: ConfigPersist): Persist {
   return (config) =>
     base({
-      adapter: encrypted,
+      adapter,
       ...defaults,
       ...config,
     })

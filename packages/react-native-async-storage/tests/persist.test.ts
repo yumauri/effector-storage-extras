@@ -1,6 +1,6 @@
 import { vi, expect, test } from 'vitest'
 import { createStore } from 'effector'
-import { async, persist } from '../src'
+import { adapter, persist } from '../src'
 
 // Mock AsyncStorage
 // @see https://react-native-async-storage.github.io/async-storage/docs/advanced/jest
@@ -18,7 +18,7 @@ vi.mock('@react-native-async-storage/async-storage', async () => {
 
 test('should export adapter and `persist` function', () => {
   expect(persist).toBeTypeOf('function')
-  expect(async).toBeTypeOf('function')
+  expect(adapter).toBeTypeOf('function')
 })
 
 test('should be ok on good parameters', () => {
