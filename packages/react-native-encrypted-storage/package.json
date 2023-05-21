@@ -2,7 +2,6 @@
   "name": "@effector-storage/react-native-encrypted-storage",
   "description": "Module for Effector to sync stores with ReactNative EncryptedStorage",
   "version": "1.0.0",
-  "author": "Victor Didenko <yumaa.verdin@gmail.com> (https://yumaa.name)",
   "keywords": [
     "react native encryptedstorage",
     "react native encrypted storage"
