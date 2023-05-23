@@ -1,0 +1,25 @@
+{
+  "name": "@effector-storage/idb-keyval",
+  "description": "Module for Effector to sync stores with IndexedDB",
+  "version": "1.0.0",
+  "keywords": [
+    "idb",
+    "idb-keyval",
+    "indexeddb"
+  ],
+  "scripts": {
+    "build": "NODE_ENV=production rollup --config ../../rollup.config.mjs",
+    "build:dev": "rollup --config ../../rollup.config.mjs",
+    "check:lint": "eslint src --ext .ts --config ../../.eslintrc.json",
+    "check:types": "tsc --noEmit",
+    "check:format": "prettier --check src",
+    "check:spell": "yaspeller .",
+    "lint": "npm-run-all --parallel check:*",
+    "format": "prettier --write src",
+    "test": "vitest run --coverage",
+    "size": "size-limit --highlight-less"
+  },
+  "dependencies": {
+    "idb-keyval": ">=5"
+  }
+}
