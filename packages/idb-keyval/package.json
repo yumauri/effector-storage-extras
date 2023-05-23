@@ -20,6 +20,6 @@
     "size": "size-limit --highlight-less"
   },
   "dependencies": {
-    "idb-keyval": ">=5"
+    "idb-keyval": ">=5.0.0"
   }
 }

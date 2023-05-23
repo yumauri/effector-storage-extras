@@ -107,8 +107,8 @@ importers:
   packages/idb-keyval:
     dependencies:
       idb-keyval:
-        specifier: '>=5'
-        version: 5.0.0
+        specifier: '>=5.0.0'
+        version: 6.2.1
 
   packages/react-native-async-storage:
     dependencies:
@@ -3700,8 +3700,8 @@ packages:
     resolution: {integrity: sha512-H2iMtd0I4Mt5eYiapRdIDjp+XzelXQ0tFE4JS7YFwFevXXMmOp9myNrUvCg0D6ws8iqkRPBfKHgbwig1SmlLfg==}
     dev: true
 
-  /idb-keyval@5.0.0:
-    resolution: {integrity: sha512-/1pWu89XEgjIud81IMj1Ctxvm2fkUnNXbodUEDZIvoa9T7C2yqkZhJjNGti3vtZOG8rlNMk+EPIb/YcyC94ZCA==}
+  /idb-keyval@6.2.1:
+    resolution: {integrity: sha512-8Sb3veuYCyrZL+VBt9LJfZjLUPWVvqn8tG28VqYNFCo43KHcKuq+b4EiXGeuaLAQWL2YmyDgMp2aSpH9JHsEQg==}
     dev: false
 
   /ieee754@1.2.1:
