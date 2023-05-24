@@ -47,8 +47,10 @@ import { persist } from '@effector-storage/idb-keyval'
 ### Options
 
 - ... all the [common options](https://github.com/yumauri/effector-storage/tree/main/README.md#options) from `effector-storage`'s `persist` function.
-- `serialize`? (_(value: any) => string_): Custom serialize function. Default = `JSON.stringify`.
-- `deserialize`? (_(value: string) => any_): Custom deserialize function. Default = `JSON.parse`.
+- `timeout`?: ([_number_]): Timeout in milliseconds, which will be used to throttle and batch updates. Default = `undefined` (meaning updates will be saved immediately)
+- `dbName`?: ([_string_]): IndexedDB database name. Default = `undefined` (in that case default `idb-keyval` database will be used — `'keyval-store'`)
+- `storeName`?: ([_string_]): IndexedDB store name. Default = `undefined` (in that case default `idb-keyval` store will be used — `'keyval'`)
+- `keyvalStore`?: (_UseStore_): Custom `idb-keyval` store. Default = `undefined` (in that case default `idb-keyval` store will be used)
 
 ## Adapter
 
@@ -60,28 +62,24 @@ import { adapter } from '@effector-storage/idb-keyval'
 
 ### Options
 
-- `serialize`? (_(value: any) => string_): Custom serialize function. Default = `JSON.stringify`.
-- `deserialize`? (_(value: string) => any_): Custom deserialize function. Default = `JSON.parse`.
+- `timeout`?: ([_number_]): Timeout in milliseconds, which will be used to throttle and batch updates. Default = `undefined` (meaning updates will be saved immediately)
+- `dbName`?: ([_string_]): IndexedDB database name. Default = `undefined` (in that case default `idb-keyval` database will be used — `'keyval-store'`)
+- `storeName`?: ([_string_]): IndexedDB store name. Default = `undefined` (in that case default `idb-keyval` store will be used — `'keyval'`)
+- `keyvalStore`?: (_UseStore_): Custom `idb-keyval` store. Default = `undefined` (in that case default `idb-keyval` store will be used)
+
+## Gotchas
+
+Although you can specify custom name for IndexedDB database, and custom name for IndexedDB store, I wouldn't recommend that. Please, read [this document](https://github.com/jakearchibald/idb-keyval/blob/main/custom-stores.md) from `idb-keyval` library.
 
 ## FAQ
 
 ### How do I use custom serialization / deserialization?
 
-Options `serialize` and `deserialize` are got you covered. But make sure, that serialization is stable, meaning, that `deserialize(serialize(object))` is equal to `object` (or `serialize(deserialize(serialize(object))) === serialize(object)`):
-
-```javascript
-import { persist } from '@effector-storage/idb-keyval'
-
-const $date = createStore(new Date(), { name: 'date' })
-
-persist({
-  store: $date,
-  serialize: (date) => String(date.getTime()),
-  deserialize: (timestamp) => new Date(Number(timestamp)),
-})
-```
+You don't need to! IndexedDB can store any structured-clonable data.
 
 [IndexedDB]: https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API
 [idb-keyval]: https://github.com/jakearchibald/idb-keyval
 [_subscription_]: https://effector.dev/docs/glossary#subscription
 [_store_]: https://effector.dev/docs/api/effector/store
+[_number_]: https://developer.mozilla.org/en-US/docs/Glossary/Number
+[_string_]: https://developer.mozilla.org/en-US/docs/Glossary/String
