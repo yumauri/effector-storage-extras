@@ -43,13 +43,11 @@ export interface Persist {
  * Function, checking if `IndexedDB` exists
  */
 function supports() {
-  try {
-    return typeof indexedDB !== 'undefined'
-  } catch (error) {
-    // accessing `indexedDB` could throw an exception only in one case -
-    // when `indexedDB` IS supported, but blocked by security policies
-    return true
-  }
+  // in case of blocked IndexedDB, `indexedDB` is available
+  // and accessing it doesn't throw an error
+  // (in contrast to `localStorage` and `sessionStorage`)
+  // but opening a database WILL end up with an error
+  return typeof indexedDB !== 'undefined'
 }
 
 /**

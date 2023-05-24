@@ -44,30 +44,23 @@ export function idbkeyval({
 }: IdbStorageConfig): StorageAdapter {
   const key = dbName + '|' + storeName
 
-  // wrap getting idb store in a function, because `createStore` could throw an exception
-  // and we need to catch it in get/set operation, not on module initialization
-  const store = () => {
-    let store: UseStore | undefined = keyvalStores.get(key) || keyvalStore
-    if (dbName && storeName && !store) {
-      store = createStore(dbName, storeName)
-      keyvalStores.set(key, store)
-    }
-    return store
+  let store: UseStore | undefined = keyvalStores.get(key) || keyvalStore
+  if (dbName && storeName && !store) {
+    store = createStore(dbName, storeName)
+    keyvalStores.set(key, store)
   }
 
   const adapter: StorageAdapter = <State>(key: string) => ({
     async get() {
-      return await get(key, store())
+      return await get(key, store)
     },
 
     async set(value: State) {
-      const to = store()
-
       if (timeout === undefined) {
-        return await set(key, value, to)
+        return await set(key, value, store)
       }
 
-      const [timeoutId, scheduled, buffered] = buffer.get(to) || [
+      const [timeoutId, scheduled, buffered] = buffer.get(store) || [
         undefined,
         undefined,
         new Map(),
@@ -77,8 +70,8 @@ export function idbkeyval({
       const deadline = Date.now() + timeout
       if (scheduled === undefined || scheduled > deadline) {
         clearTimeout(timeoutId)
-        buffer.set(to, [
-          setTimeout(flush, timeout, to), // new timeoutId
+        buffer.set(store, [
+          setTimeout(flush, timeout, store), // new timeoutId
           deadline, // new scheduled
           buffered, // old buffered with new/replaced key:value
         ])
@@ -86,12 +79,6 @@ export function idbkeyval({
     },
   })
 
-  adapter.keyArea = keyArea
-  try {
-    adapter.keyArea = store()
-  } catch (error) {
-    // do nothing
-  }
-
+  adapter.keyArea = store || keyArea
   return adapter
 }
