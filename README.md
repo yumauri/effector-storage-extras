@@ -10,3 +10,9 @@ Collection of various adapters for [`effector-storage`](https://github.com/yumau
 
 - [@effector-storage/react-native-encrypted-storage](https://github.com/yumauri/effector-storage-extras/tree/main/packages/react-native-encrypted-storage)<br>
   Adapter to persist stores using React Native [EncryptedStorage](https://github.com/emeraldsanto/react-native-encrypted-storage)
+
+## Sponsored
+
+[<img src="https://setplex.com/img/logo.png" alt="Setplex OTT Platform" width="236">](https://setplex.com/en/)
+
+[Setplex OTT Platform](https://setplex.com/en/)
