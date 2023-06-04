@@ -65,7 +65,7 @@
     "vitest": "^0.31.1",
     "yaspeller": "^8.0.1"
   },
-  "packageManager": "pnpm@8.5.1",
+  "packageManager": "pnpm@8.6.0",
   "pnpm": {
     "patchedDependencies": {
       "react-native-encrypted-storage@4.0.3": "patches/react-native-encrypted-storage@4.0.3.patch"
