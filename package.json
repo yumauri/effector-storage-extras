@@ -26,8 +26,8 @@
     "check:spell": "nx run-many -t check:spell",
     "lint": "nx run-many -t lint",
     "format": "nx run-many -t format",
-    "test": "nx run-many -t test",
-    "//test": "vitest run",
+    "//test": "nx run-many -t test",
+    "test": "vitest run --coverage",
     "size": "nx run-many -t size"
   },
   "dependencies": {

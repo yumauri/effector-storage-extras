@@ -1,0 +1,54 @@
+name: build
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version:
+          - 16
+          - 18
+
+    name: Node ${{ matrix.node-version }} / effector ${{ matrix.effector-version }}
+
+    steps:
+      - name: 🛎️ Checkout
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: 📦 Use PNPM
+        uses: pnpm/action-setup@v2
+        with:
+          version: 8.6.0
+
+      - name: 🐧 Use Node ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: pnpm
+
+      - name: 🐾 Track affected
+        uses: nrwl/nx-set-shas@v3
+
+      - name: 🔍 Installation
+        run: pnpm install --frozen-lockfile --ignore-scripts
+
+      - name: 👮‍♂️ Linting
+        run: pnpm exec npx nx affected -t lint --parallel=3
+
+      - name: 🧪 Testing
+        run: pnpm test
+
+      - name: 🔧 Build
+        run: pnpm exec npx nx affected -t build --parallel=3
+
+      - name: 🔬 Check size
+        run: pnpm exec npx nx affected -t size --parallel=3
