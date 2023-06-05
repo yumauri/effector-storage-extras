@@ -12,6 +12,14 @@
     {
       "matchDatasources": ["npm"],
       "minimumReleaseAge": "3 days"
+    },
+    {
+      "matchPackageNames": [
+        "idb-keyval",
+        "@react-native-async-storage/async-storage",
+        "react-native-encrypted-storage"
+      ],
+      "enabled": false
     }
   ]
 }
