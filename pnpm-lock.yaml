@@ -111,7 +111,7 @@ importers:
   packages/idb-keyval:
     dependencies:
       idb-keyval:
-        specifier: '>=5.0.0'
+        specifier: '>=5.1.5'
         version: 6.2.1
     devDependencies:
       fake-indexeddb:

@@ -20,7 +20,7 @@
     "size": "size-limit --highlight-less"
   },
   "dependencies": {
-    "idb-keyval": ">=5.0.0"
+    "idb-keyval": ">=5.1.5"
   },
   "devDependencies": {
     "fake-indexeddb": "^4.0.1",
