@@ -19,6 +19,6 @@
     "size": "size-limit --highlight-less"
   },
   "dependencies": {
-    "react-native-encrypted-storage": "^4.0.3"
+    "react-native-encrypted-storage": ">=4.0.0"
   }
 }
