@@ -109,6 +109,7 @@ const src = () => ({
           '.': {
             require: './index.cjs',
             import: './index.js',
+            types: './index.d.ts',
           },
         },
       }),
