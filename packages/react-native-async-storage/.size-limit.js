@@ -2,7 +2,7 @@ module.exports = [
   {
     name: 'es module',
     path: '../../build/packages/react-native-async-storage/index.js',
-    limit: '365 B',
+    limit: '363 B',
     import: '{ persist }',
     ignore: [
       'effector',
@@ -13,7 +13,7 @@ module.exports = [
   {
     name: 'cjs module',
     path: '../../build/packages/react-native-async-storage/index.cjs',
-    limit: '332 B',
+    limit: '330 B',
     // import: '{ persist }', // tree-shaking is not working with cjs
     ignore: [
       'effector',
