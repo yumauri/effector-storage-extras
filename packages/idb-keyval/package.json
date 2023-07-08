@@ -1,7 +1,7 @@
 {
   "name": "@effector-storage/idb-keyval",
   "description": "Module for Effector to sync stores with IndexedDB",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "keywords": [
     "idb",
     "idb-keyval",
