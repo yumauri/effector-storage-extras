@@ -100,16 +100,16 @@ const src = () => ({
         // cjs + esm magic
         type: 'module',
         sideEffects: false,
-        main: 'index.cjs',
-        module: 'index.js',
-        'react-native': 'index.js',
         types: 'index.d.ts',
+        module: 'index.js',
+        main: 'index.cjs',
+        'react-native': 'index.js',
         exports: {
           './package.json': './package.json',
           '.': {
-            require: './index.cjs',
-            import: './index.js',
             types: './index.d.ts',
+            import: './index.js',
+            require: './index.cjs',
           },
         },
       }),
