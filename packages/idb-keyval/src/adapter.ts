@@ -17,7 +17,7 @@ const buffer: Map<
   [
     number | undefined, // timeoutId
     number | undefined, // scheduled
-    Map<string, any>
+    Map<string, any>,
   ]
 > = new Map()
 
