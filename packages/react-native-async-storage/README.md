@@ -1,5 +1,7 @@
 # React Native AsyncStorage adapter
 
+[![bundlejs](https://deno.bundlejs.com/badge?q=@effector-storage/react-native-async-storage&treeshake=[{persist}]&config={%22esbuild%22:{%22external%22:[%22effector%22,%22@react-native-async-storage/async-storage%22]}})](https://bundlejs.com/?q=%40effector-storage%2Freact-native-async-storage&treeshake=%5B%7Bpersist%7D%5D&config=%7B%22esbuild%22%3A%7B%22external%22%3A%5B%22effector%22%2C%22%40react-native-async-storage%2Fasync-storage%22%5D%7D%7D)
+
 Adapter to persist [_store_] using React Native [AsyncStorage].
 
 ## Preconditions

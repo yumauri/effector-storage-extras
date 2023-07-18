@@ -1,5 +1,7 @@
 # IndexedDB adapter
 
+[![bundlejs](https://deno.bundlejs.com/badge?q=@effector-storage/idb-keyval&treeshake=[{persist}]&config={%22esbuild%22:{%22external%22:[%22effector%22,%22idb-keyval%22]}})](https://bundlejs.com/?q=%40effector-storage%2Fidb-keyval&treeshake=%5B%7Bpersist%7D%5D&config=%7B%22esbuild%22%3A%7B%22external%22%3A%5B%22effector%22%2C%22idb-keyval%22%5D%7D%7D)
+
 Adapter to persist [_store_] in [IndexedDB], using [idb-keyval] library.
 
 ## Install
