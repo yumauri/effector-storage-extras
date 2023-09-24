@@ -57,7 +57,7 @@
     "npm-run-all": "^4.1.5",
     "nx": "^16.9.0",
     "prettier": "^3.0.3",
-    "rollup": "^3.29.2",
+    "rollup": "^3.29.3",
     "rollup-plugin-command": "^1.1.3",
     "rollup-plugin-dts": "^6.0.2",
     "rollup-plugin-generate-package-json": "^3.2.0",
