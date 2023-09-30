@@ -1,11 +1,7 @@
+import 'fake-indexeddb/auto'
 import { vi, expect, test } from 'vitest'
 import { createEvent, createStore } from 'effector'
 import { persist } from '../src'
-
-// Mock IndexedDB
-vi.hoisted(async () => {
-  await import('fake-indexeddb/auto')
-})
 
 async function tick(t = 10) {
   return await new Promise((resolve) => setTimeout(resolve, t))

@@ -1,12 +1,8 @@
+import 'fake-indexeddb/auto'
 import { vi, expect, test } from 'vitest'
 import { createStore } from 'effector'
 import { get, set, setMany } from 'idb-keyval'
 import { persist } from '../src'
-
-// Mock IndexedDB
-vi.hoisted(async () => {
-  await import('fake-indexeddb/auto')
-})
 
 vi.mock('idb-keyval', async (importOriginal) => {
   const mod: any = await importOriginal()
