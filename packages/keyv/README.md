@@ -2,7 +2,7 @@
 
 [![bundlejs](https://deno.bundlejs.com/badge?q=@effector-storage/keyv&treeshake=[{persist}]&config={%22esbuild%22:{%22external%22:[%22effector%22,%22keyv%22]}})](https://bundlejs.com/?q=%40effector-storage%2Fkeyv&treeshake=%5B%7Bpersist%7D%5D&config=%7B%22esbuild%22%3A%7B%22external%22%3A%5B%22effector%22%2C%22keyv%22%5D%7D%7D)
 
-Adapter to persist [_store_] using [Keyv] library.
+Adapter to persist [_store_] in multiple backends, using [Keyv] library.
 
 ## Install
 
@@ -108,7 +108,7 @@ persist({
 Please, read [Keyv] documentation for more details.
 
 [Map]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map
-[keyv]: https://github.com/jakearchibald/keyv
+[keyv]: https://github.com/jaredwray/keyv
 [keyv.options]: https://github.com/jaredwray/keyv/tree/main/packages/keyv#api
 [_subscription_]: https://effector.dev/docs/glossary#subscription
 [_store_]: https://effector.dev/docs/api/effector/store
