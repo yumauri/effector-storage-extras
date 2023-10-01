@@ -22,6 +22,7 @@
     "io-ts",
     "isomorphic",
     "keyArea",
+    "Keyv",
     "keyval",
     "localStorage",
     "noop",

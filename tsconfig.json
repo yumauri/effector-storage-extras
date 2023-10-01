@@ -4,6 +4,7 @@
     "target": "es2018",
     "module": "commonjs",
     "moduleResolution": "node",
+    "esModuleInterop": true,
     "lib": ["es2018", "dom"],
     "types": [],
     "skipLibCheck": true,
