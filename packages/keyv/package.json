@@ -1,0 +1,28 @@
+{
+  "name": "@effector-storage/keyv",
+  "description": "Module for Effector to sync stores using Keyv",
+  "version": "1.0.0",
+  "keywords": [
+    "keyv"
+  ],
+  "scripts": {
+    "build": "NODE_ENV=production rollup --config ../../rollup.config.mjs",
+    "build:dev": "rollup --config ../../rollup.config.mjs",
+    "check:lint": "eslint src --ext .ts --config ../../.eslintrc.json",
+    "check:types": "tsc --noEmit",
+    "check:format": "prettier --check src",
+    "check:spell": "yaspeller .",
+    "lint": "npm-run-all --parallel check:*",
+    "publint": "pnpm dlx publint ../../build/packages/keyv",
+    "format": "prettier --write src",
+    "test": "vitest run --coverage",
+    "size": "size-limit --highlight-less"
+  },
+  "dependencies": {
+    "keyv": ">=4.0.0"
+  },
+  "devDependencies": {
+    "@types/mock-require": "^2.0.1",
+    "mock-require": "^3.0.3"
+  }
+}
