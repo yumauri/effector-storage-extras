@@ -124,7 +124,7 @@ importers:
   packages/keyv:
     dependencies:
       keyv:
-        specifier: '>=4.0.0'
+        specifier: '>=4.5.3'
         version: 4.5.3
     devDependencies:
       '@types/mock-require':

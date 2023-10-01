@@ -19,7 +19,7 @@
     "size": "size-limit --highlight-less"
   },
   "dependencies": {
-    "keyv": ">=4.0.0"
+    "keyv": ">=4.5.3"
   },
   "devDependencies": {
     "@types/mock-require": "^2.0.1",
