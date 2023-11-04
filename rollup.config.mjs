@@ -107,9 +107,14 @@ const src = () => ({
         exports: {
           './package.json': './package.json',
           '.': {
-            types: './index.d.ts',
-            import: './index.js',
-            require: './index.cjs',
+            import: {
+              types: './index.d.ts',
+              default: './index.js',
+            },
+            require: {
+              types: './index.d.cts',
+              default: './index.cjs',
+            },
           },
         },
       }),
@@ -151,14 +156,14 @@ const cjsdts = () => ({
   input: `${SRC}/index.ts`,
   output: [
     {
-      file: `${BUILD}/index.cjs.d.ts`,
+      file: `${BUILD}/index.d.cts`,
       format: 'es',
     },
   ],
   external,
   plugins: [
     generateDts({ respectExternal: true }),
-    command([`pnpm exec prettier --write ${BUILD}/index.cjs.d.ts`], {
+    command([`pnpm exec prettier --write ${BUILD}/index.d.cts`], {
       wait: true,
     }),
   ],
