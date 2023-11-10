@@ -128,8 +128,8 @@ importers:
         version: 4.5.4
     devDependencies:
       '@types/mock-require':
-        specifier: ^2.0.2
-        version: 2.0.2
+        specifier: ^2.0.3
+        version: 2.0.3
       mock-require:
         specifier: ^3.0.3
         version: 3.0.3
@@ -2493,8 +2493,8 @@ packages:
     resolution: {integrity: sha512-dRLjCWHYg4oaA77cxO64oO+7JwCwnIzkZPdrrC71jQmQtlhM556pwKo5bUzqvZndkVbeFLIIi+9TC40JNF5hNQ==}
     dev: true
 
-  /@types/mock-require@2.0.2:
-    resolution: {integrity: sha512-+gdhqQrG7NLVr3TZMzDa6ovD8drpMdXDlA0f4wDODWjl/PLCInPRWtrk9iPvscM48J44Cosed1cqCXR3u8ttMg==}
+  /@types/mock-require@2.0.3:
+    resolution: {integrity: sha512-0Hd1krmO7Dwa8haImu+eZXZ6FeCtixS8S1xvM6LWNJE5DFV5A92/zpAkQCDPOA/Z13d1xY3LqS7hpSWqlDzxrQ==}
     dependencies:
       '@types/node': 20.8.10
     dev: true
