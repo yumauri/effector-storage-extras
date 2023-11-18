@@ -9,6 +9,7 @@ module.exports = [
       'effector-storage',
       '@react-native-async-storage/async-storage',
     ],
+    gzip: true,
   },
   {
     name: 'cjs module',
@@ -20,5 +21,6 @@ module.exports = [
       'effector-storage',
       '@react-native-async-storage/async-storage',
     ],
+    gzip: true,
   },
 ]

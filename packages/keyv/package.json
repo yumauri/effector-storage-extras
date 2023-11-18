@@ -11,7 +11,7 @@
     "check:lint": "eslint src --ext .ts --config ../../.eslintrc.json",
     "check:types": "tsc --noEmit",
     "check:format": "prettier --check src",
-    "check:spell": "yaspeller .",
+    "//check:spell": "yaspeller .",
     "lint": "npm-run-all --parallel check:*",
     "publint": "pnpm dlx publint ../../build/packages/keyv",
     "format": "prettier --write src",
@@ -22,7 +22,7 @@
     "keyv": ">=4.0.0"
   },
   "devDependencies": {
-    "@types/mock-require": "^2.0.2",
+    "@types/mock-require": "^2.0.3",
     "mock-require": "^3.0.3"
   }
 }

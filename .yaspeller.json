@@ -45,7 +45,6 @@
   ],
   "ignoreText": [],
   "ignoreUrls": true,
-  "ignoreUppercase": true,
   "findRepeatWords": false,
   "maxRequests": 5
 }

@@ -5,6 +5,7 @@ module.exports = [
     limit: '360 B',
     import: '{ persist }',
     ignore: ['effector', 'effector-storage', 'react-native-encrypted-storage'],
+    gzip: true,
   },
   {
     name: 'cjs module',
@@ -12,5 +13,6 @@ module.exports = [
     limit: '326 B',
     // import: '{ persist }', // tree-shaking is not working with cjs
     ignore: ['effector', 'effector-storage', 'react-native-encrypted-storage'],
+    gzip: true,
   },
 ]

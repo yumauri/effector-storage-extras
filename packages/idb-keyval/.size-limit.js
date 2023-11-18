@@ -5,6 +5,7 @@ module.exports = [
     limit: '412 B',
     import: '{ persist }',
     ignore: ['effector', 'effector-storage', 'idb-keyval'],
+    gzip: true,
   },
   {
     name: 'cjs module',
@@ -12,5 +13,6 @@ module.exports = [
     limit: '608 B',
     // import: '{ persist }', // tree-shaking is not working with cjs
     ignore: ['effector', 'effector-storage', 'idb-keyval'],
+    gzip: true,
   },
 ]
