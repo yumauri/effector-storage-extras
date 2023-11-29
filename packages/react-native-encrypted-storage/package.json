@@ -1,7 +1,7 @@
 {
   "name": "@effector-storage/react-native-encrypted-storage",
   "description": "Module for Effector to sync stores with ReactNative EncryptedStorage",
-  "version": "1.0.3",
+  "version": "1.1.0",
   "keywords": [
     "react native encryptedstorage",
     "react native encrypted storage"
