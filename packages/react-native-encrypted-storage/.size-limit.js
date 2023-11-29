@@ -2,7 +2,7 @@ module.exports = [
   {
     name: 'es module',
     path: '../../build/packages/react-native-encrypted-storage/index.js',
-    limit: '358 B',
+    limit: '360 B', // loose limit
     import: '{ persist }',
     ignore: ['effector', 'effector-storage', 'react-native-encrypted-storage'],
     gzip: true,

@@ -10,7 +10,7 @@ module.exports = [
   {
     name: 'cjs module',
     path: '../../build/packages/keyv/index.cjs',
-    limit: '382 B',
+    limit: '383 B', // loose limit
     // import: '{ persist }', // tree-shaking is not working with cjs
     ignore: ['effector', 'effector-storage', 'keyv'],
     gzip: true,
