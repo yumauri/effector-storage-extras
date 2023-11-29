@@ -2,7 +2,7 @@ module.exports = [
   {
     name: 'es module',
     path: '../../build/packages/react-native-async-storage/index.js',
-    limit: '363 B',
+    limit: '362 B',
     import: '{ persist }',
     ignore: [
       'effector',
