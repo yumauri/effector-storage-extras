@@ -43,7 +43,7 @@ importers:
         version: 0.4.4(rollup@4.6.0)
       '@size-limit/preset-small-lib':
         specifier: ^11.0.0
-        version: 11.0.0(size-limit@11.0.0)
+        version: 11.0.0(size-limit@11.0.1)
       '@typescript-eslint/eslint-plugin':
         specifier: ^6.13.1
         version: 6.13.1(@typescript-eslint/parser@6.13.1)(eslint@8.54.0)(typescript@5.3.2)
@@ -96,8 +96,8 @@ importers:
         specifier: ^3.2.0
         version: 3.2.0(rollup@4.6.0)
       size-limit:
-        specifier: ^11.0.0
-        version: 11.0.0
+        specifier: ^11.0.1
+        version: 11.0.1
       typescript:
         specifier: ^5.3.2
         version: 5.3.2
@@ -2238,7 +2238,7 @@ packages:
     engines: {node: '>=18'}
     dev: true
 
-  /@size-limit/esbuild@11.0.0(size-limit@11.0.0):
+  /@size-limit/esbuild@11.0.0(size-limit@11.0.1):
     resolution: {integrity: sha512-OOmba2ZuMpaUhmBXgCfgrO7L6zkUDwvFFfW8T+dK08968LQ79Q+kNgEXQAd+dhj9TlTkHyyEDczWmx16e9cXoQ==}
     engines: {node: ^18.0.0 || >=20.0.0}
     peerDependencies:
@@ -2246,26 +2246,26 @@ packages:
     dependencies:
       esbuild: 0.19.8
       nanoid: 5.0.3
-      size-limit: 11.0.0
+      size-limit: 11.0.1
     dev: true
 
-  /@size-limit/file@11.0.0(size-limit@11.0.0):
+  /@size-limit/file@11.0.0(size-limit@11.0.1):
     resolution: {integrity: sha512-tTg6sSiFbiogiof3GV4iIRCPS4+46Hvq4QWXGXp00Be/tOnpglXF62xNpCfFwefx9YCXxCyeYSqqaRBjpRCsmQ==}
     engines: {node: ^18.0.0 || >=20.0.0}
     peerDependencies:
       size-limit: 11.0.0
     dependencies:
-      size-limit: 11.0.0
+      size-limit: 11.0.1
     dev: true
 
-  /@size-limit/preset-small-lib@11.0.0(size-limit@11.0.0):
+  /@size-limit/preset-small-lib@11.0.0(size-limit@11.0.1):
     resolution: {integrity: sha512-B4KDPbx5E8Vsn/aXilt2iAeofRBJdT8svQRSylTQPw5RkrumXUBKioM1dmWUXcnuHR2zUveJXlMxGmbdmxbJpQ==}
     peerDependencies:
       size-limit: 11.0.0
     dependencies:
-      '@size-limit/esbuild': 11.0.0(size-limit@11.0.0)
-      '@size-limit/file': 11.0.0(size-limit@11.0.0)
-      size-limit: 11.0.0
+      '@size-limit/esbuild': 11.0.0(size-limit@11.0.1)
+      '@size-limit/file': 11.0.0(size-limit@11.0.1)
+      size-limit: 11.0.1
     dev: true
 
   /@tsconfig/node10@1.0.9:
@@ -4467,6 +4467,11 @@ packages:
     engines: {node: '>=10'}
     dev: true
 
+  /lilconfig@3.0.0:
+    resolution: {integrity: sha512-K2U4W2Ff5ibV7j7ydLr+zLAkIg5JJ4lPn1Ltsdt+Tz/IjQ8buJ55pZAxoP34lqIiwtF9iAvtLv3JGv7CAyAg+g==}
+    engines: {node: '>=14'}
+    dev: true
+
   /lines-and-columns@1.2.4:
     resolution: {integrity: sha512-7ylylesZQ/PV29jhEDl3Ufjo6ZX7gCqJr5F7PKrqc93v7fzSymt1BpwEU8nAUXs8qzzvqhbjhK5QZg6Mt/HkBg==}
     dev: true
@@ -5473,15 +5478,15 @@ packages:
     engines: {node: '>=14'}
     dev: true
 
-  /size-limit@11.0.0:
-    resolution: {integrity: sha512-6+i4rE1GRzx/vRpuitRYQiZJNTXJjde+4P2NPg8AK7pURrE1+hA3mGstzvT8vQ8DuYFnvp9fh4CHM7Heq3EKXA==}
+  /size-limit@11.0.1:
+    resolution: {integrity: sha512-6L80ocVspWPrhIRg8kPl41VypqTGH8/lu9e6TJiSJpkNLtOR2h/EEqdAO/wNJOv/sUVtjX+lVEWrzBpItGP+gQ==}
     engines: {node: ^18.0.0 || >=20.0.0}
     hasBin: true
     dependencies:
       bytes-iec: 3.1.1
       chokidar: 3.5.3
       globby: 14.0.0
-      lilconfig: 2.1.0
+      lilconfig: 3.0.0
       nanospinner: 1.1.0
       picocolors: 1.0.0
     dev: true
