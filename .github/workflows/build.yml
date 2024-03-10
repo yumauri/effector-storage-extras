@@ -35,23 +35,20 @@ jobs:
           registry-url: https://registry.npmjs.org/
           cache: pnpm
 
-      - name: 🐾 Track affected
-        uses: nrwl/nx-set-shas@v3
-
       - name: 🔍 Install dependencies
         run: pnpm install --frozen-lockfile --ignore-scripts
 
       - name: 👮 Lint
-        run: pnpm exec npx nx affected -t lint --parallel=3
+        run: pnpm lint
 
       - name: 🧪 Test
         run: pnpm test
 
       - name: 🔧 Build
-        run: pnpm exec npx nx affected -t build --parallel=3
+        run: pnpm build
 
       - name: 👮 Lint package.json files
-        run: pnpm exec npx nx affected -t publint --parallel=3
+        run: pnpm publint
 
       - name: 🔬 Check size
-        run: pnpm exec npx nx affected -t size --parallel=3
+        run: pnpm size
