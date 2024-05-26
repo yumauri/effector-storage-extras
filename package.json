@@ -31,7 +31,7 @@
     "size": "pnpm run -r size"
   },
   "dependencies": {
-    "effector": "^23.2.0",
+    "effector": "^23.2.2",
     "effector-storage": "^7.1.0"
   },
   "devDependencies": {
