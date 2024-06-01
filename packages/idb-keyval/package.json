@@ -24,7 +24,7 @@
     "idb-keyval": ">=5.0.0"
   },
   "devDependencies": {
-    "fake-indexeddb": "^5.0.2",
+    "fake-indexeddb": "^6.0.0",
     "idb": "^8.0.0"
   }
 }
