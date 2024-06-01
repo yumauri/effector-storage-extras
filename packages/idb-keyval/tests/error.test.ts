@@ -40,7 +40,7 @@ test('should fail on same db name with different store names', async () => {
       },
     ],
   ])
-  expect(watch.mock.calls[0][0].error).toMatch(
+  expect(String(watch.mock.calls[0][0].error)).toMatch(
     /No objectStore named store2 in this database/
   )
 })
