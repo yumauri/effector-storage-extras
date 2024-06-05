@@ -35,9 +35,9 @@
     "effector-storage": "^7.1.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.24.6",
-    "@babel/plugin-transform-block-scoping": "^7.24.6",
-    "@babel/preset-typescript": "^7.24.6",
+    "@babel/core": "^7.24.7",
+    "@babel/plugin-transform-block-scoping": "^7.24.7",
+    "@babel/preset-typescript": "^7.24.7",
     "@rollup/plugin-babel": "^6.0.4",
     "@rollup/plugin-node-resolve": "^15.2.3",
     "@rollup/plugin-terser": "^0.4.4",
