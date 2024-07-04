@@ -59,7 +59,7 @@
     "rollup-plugin-dts": "^6.1.1",
     "rollup-plugin-generate-package-json": "^3.2.0",
     "size-limit": "^11.1.4",
-    "typescript": "^5.4.5",
+    "typescript": "^5.5.3",
     "vitest": "^1.6.0",
     "yaspeller": "^10.0.1"
   },
