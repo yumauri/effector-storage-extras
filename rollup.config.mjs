@@ -142,13 +142,7 @@ const dts = () => ({
   external,
   plugins: [
     generateDts({ respectExternal: true }),
-    command(
-      [
-        `pnpm exec flowgen ${BUILD}/index.d.ts --add-flow-header --no-jsdoc --output-file ${BUILD}/index.js.flow`,
-        `pnpm exec prettier --write ${BUILD}/index.d.ts ${BUILD}/index.js.flow`,
-      ],
-      { wait: true }
-    ),
+    command([`pnpm exec prettier --write ${BUILD}/index.d.ts`], { wait: true }),
   ],
 })
 
