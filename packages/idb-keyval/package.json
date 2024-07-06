@@ -13,7 +13,6 @@
     "check:lint": "eslint src --config ../../eslint.config.mjs",
     "check:types": "tsc --noEmit",
     "check:format": "prettier --check src",
-    "//check:spell": "yaspeller .",
     "lint": "npm-run-all --parallel check:*",
     "publint": "pnpm dlx publint ../../build/packages/idb-keyval",
     "format": "prettier --write src",

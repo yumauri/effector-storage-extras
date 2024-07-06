@@ -12,7 +12,6 @@
     "check:lint": "eslint src --config ../../eslint.config.mjs",
     "check:types": "tsc --noEmit",
     "check:format": "prettier --check src",
-    "//check:spell": "yaspeller .",
     "lint": "npm-run-all --parallel check:*",
     "publint": "pnpm dlx publint ../../build/packages/react-native-encrypted-storage",
     "format": "prettier --write src",
