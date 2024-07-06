@@ -12,7 +12,7 @@
     "check:lint": "eslint src --config ../../eslint.config.mjs",
     "check:types": "tsc --noEmit",
     "check:format": "prettier --check src",
-    "lint": "npm-run-all --parallel check:*",
+    "lint": "pnpm run /^check:/",
     "publint": "pnpm dlx publint ../../build/packages/react-native-async-storage",
     "format": "prettier --write src",
     "test": "vitest run --coverage",
