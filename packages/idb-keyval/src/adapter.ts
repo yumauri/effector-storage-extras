@@ -9,17 +9,17 @@ export interface IdbStorageConfig {
   keyvalStore?: UseStore
 }
 
-export const keyArea = Symbol() // eslint-disable-line symbol-description
-const keyvalStores: Map<string, UseStore> = new Map()
+export const keyArea = Symbol()
+const keyvalStores = new Map<string, UseStore>()
 
-const buffer: Map<
+const buffer = new Map<
   UseStore | undefined,
   [
     number | undefined, // timeoutId
     number | undefined, // scheduled
     Map<string, any>,
   ]
-> = new Map()
+>()
 
 /**
  * Flush buffer to actual IndexedDB store

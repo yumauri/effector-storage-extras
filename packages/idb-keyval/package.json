@@ -10,7 +10,7 @@
   "scripts": {
     "build": "NODE_ENV=production rollup --config ../../rollup.config.mjs",
     "build:dev": "rollup --config ../../rollup.config.mjs",
-    "check:lint": "eslint src --ext .ts --config ../../.eslintrc.js",
+    "check:lint": "eslint src --config ../../eslint.config.mjs",
     "check:types": "tsc --noEmit",
     "check:format": "prettier --check src",
     "//check:spell": "yaspeller .",
@@ -24,7 +24,7 @@
     "idb-keyval": ">=5.0.0"
   },
   "devDependencies": {
-    "fake-indexeddb": "^5.0.2",
+    "fake-indexeddb": "^6.0.0",
     "idb": "^8.0.0"
   }
 }
