@@ -61,6 +61,9 @@
   "pnpm": {
     "patchedDependencies": {
       "react-native-encrypted-storage@4.0.3": "patches/react-native-encrypted-storage@4.0.3.patch"
+    },
+    "overrides": {
+      "is-core-module": "npm:@nolyfill/is-core-module@^1"
     }
   }
 }
