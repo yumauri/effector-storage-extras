@@ -5,7 +5,7 @@ settings:
   excludeLinksFromLockfile: false
 
 overrides:
-  is-core-module: npm:@nolyfill/is-core-module@^1
+  is-core-module: npm:@nolyfill/is-core-module@^1.0.39
 
 patchedDependencies:
   react-native-encrypted-storage@4.0.3:
@@ -502,8 +502,8 @@ packages:
     resolution: {integrity: sha512-oGB+UxlgWcgQkgwo8GcEGwemoTFt3FIO9ababBmaGwXIoBKZ+GTy0pP185beGg7Llih/NSHSV2XAs1lnznocSg==}
     engines: {node: '>= 8'}
 
-  '@nolyfill/is-core-module@1.0.32':
-    resolution: {integrity: sha512-xmhh+wwmaCtNjY7slRZ/U+/NGjPii1dfKyYCv8iHofIbMkXFLyZTpdsIoiGbtf/JQRfQuwlohZ6B/sb2CrQbFw==}
+  '@nolyfill/is-core-module@1.0.39':
+    resolution: {integrity: sha512-nn5ozdjYQpUCZlWGuxcJY/KpxkWQs4DcbMCmKojjyrYDEAGy4Ce19NN4v5MduafTwJlbKc99UA8YhSVqq9yPZA==}
     engines: {node: '>=12.4.0'}
 
   '@react-native-async-storage/async-storage@1.23.1':
@@ -2205,7 +2205,7 @@ snapshots:
       '@nodelib/fs.scandir': 2.1.5
       fastq: 1.17.1
 
-  '@nolyfill/is-core-module@1.0.32': {}
+  '@nolyfill/is-core-module@1.0.39': {}
 
   '@react-native-async-storage/async-storage@1.23.1':
     dependencies:
@@ -3192,7 +3192,7 @@ snapshots:
 
   resolve@1.22.8:
     dependencies:
-      is-core-module: '@nolyfill/is-core-module@1.0.32'
+      is-core-module: '@nolyfill/is-core-module@1.0.39'
       path-parse: 1.0.7
       supports-preserve-symlinks-flag: 1.0.0
 
