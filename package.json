@@ -53,7 +53,7 @@
     "rollup-plugin-dts": "^6.1.1",
     "rollup-plugin-generate-package-json": "^3.2.0",
     "size-limit": "^11.1.4",
-    "typescript": "^5.5.3",
+    "typescript": "^5.5.4",
     "typescript-eslint": "^7.15.0",
     "vitest": "^1.6.0"
   },
