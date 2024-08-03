@@ -44,7 +44,7 @@
     "@rollup/plugin-terser": "^0.4.4",
     "@size-limit/preset-small-lib": "^11.1.4",
     "@types/eslint__js": "^8.42.3",
-    "@vitest/coverage-v8": "^1.6.0",
+    "@vitest/coverage-v8": "^2.0.5",
     "eslint": "^9.6.0",
     "eslint-config-prettier": "^9.1.0",
     "prettier": "^3.3.2",
@@ -55,7 +55,7 @@
     "size-limit": "^11.1.4",
     "typescript": "^5.5.3",
     "typescript-eslint": "^7.15.0",
-    "vitest": "^1.6.0"
+    "vitest": "^2.0.5"
   },
   "packageManager": "pnpm@9.4.0",
   "pnpm": {
