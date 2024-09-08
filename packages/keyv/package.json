@@ -18,7 +18,7 @@
     "size": "size-limit --highlight-less"
   },
   "dependencies": {
-    "keyv": ">=4.0.0"
+    "keyv": ">=4.0.0 <5.0.0"
   },
   "devDependencies": {
     "@types/mock-require": "^2.0.3",
