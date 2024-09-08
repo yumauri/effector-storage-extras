@@ -1,8 +1,9 @@
 import type { StorageAdapter } from 'effector-storage'
+import type { KeyvOptions, KeyvStoreAdapter } from 'keyv'
 import Keyv from 'keyv'
 
 export interface KeyvStorageConfig {
-  with?: string | Keyv.Store<any> | Keyv.Options<any>
+  with?: Keyv | KeyvStoreAdapter | KeyvOptions | Map<any, any>
   ttl?: number
 }
 
@@ -14,7 +15,7 @@ export function keyv({ with: keyv, ttl }: KeyvStorageConfig): StorageAdapter {
   const store =
     keyv instanceof Keyv //
       ? keyv
-      : new Keyv(keyv as any)
+      : new Keyv(keyv)
 
   // should add listener?
   // if there is a listener added, `set` will not throw an error on symbols

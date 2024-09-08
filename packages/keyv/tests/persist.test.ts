@@ -1,18 +1,11 @@
 import { vi, expect, test } from 'vitest'
 import { createEvent, createStore } from 'effector'
-import mock from 'mock-require'
 import Keyv from 'keyv'
 import { adapter, persist } from '../src'
 
 async function tick(t = 10) {
   return await new Promise((resolve) => setTimeout(resolve, t))
 }
-
-// vitest cannot mock `require`, so use `mock-require` package instead,
-// to mock '@keyv/redis' module
-mock('@keyv/redis', function () {
-  return new Map()
-})
 
 test('should export adapter and `persist` function', () => {
   expect(persist).toBeTypeOf('function')
@@ -24,17 +17,7 @@ test('should be ok on good parameters', () => {
   expect(() => persist({ store: $store })).not.toThrowError()
 })
 
-test('should be ok with uri', () => {
-  const $store = createStore(0, { name: 'store-1' })
-  expect(() =>
-    persist({
-      store: $store,
-      with: 'redis://localhost:6379', // this will require mocked '@keyv/redis'
-    })
-  ).not.toThrowError()
-})
-
-test('should be ok with keyv instance', () => {
+test('should be ok with empty keyv instance', () => {
   const $store = createStore(0, { name: 'store-2' })
   expect(() =>
     persist({
@@ -56,18 +39,6 @@ test('should be ok with keyv options', () => {
       },
     })
   ).not.toThrowError()
-})
-
-// I'm not sure, should this case throw an error,
-// or handle it with `supports` function and return `nil` adapter?
-test('should throw an error on absent adapter module', () => {
-  const $store = createStore(0, { name: 'store-4' })
-  expect(() =>
-    persist({
-      store: $store,
-      with: 'sqlite://path/to/database.sqlite',
-    })
-  ).toThrowError(`Cannot find module '@keyv/sqlite'`)
 })
 
 test('should restore value from keyv', async () => {

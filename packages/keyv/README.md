@@ -23,16 +23,22 @@ Also, you need to install required [adapters for Keyv](https://keyv.org/docs/).
 
 ## Usage
 
-Import `persist` function from `'@effector-storage/keyv'` module, and it will just work:
+Due to changes in [Keyv v5](https://keyv.org/docs/v4-to-v5/), you have to create Keyv storage adapter explicitely.
+
+Import `persist` function from `'@effector-storage/keyv'` module, and use it with created adapter:
 
 ```javascript
+import KeyvRedis from '@keyv/redis'
 import { persist } from '@effector-storage/keyv'
 
-// persist store `$counter` with key 'counter'
+// create new Redis Keyv storage adapter
+const storage = new KeyvRedis({ uri: 'redis://user:pass@localhost:6379' })
+
+// persist store `$counter` with key 'counter' in Redis
 persist({
   store: $counter,
   key: 'counter',
-  with: 'redis://user:pass@localhost:6379',
+  with: storage,
 })
 ```
 
@@ -65,12 +71,8 @@ import { adapter } from '@effector-storage/keyv'
 
 ### Options
 
-- `with`?: ([_string_] | [Keyv] | [Keyv.Options]): Connection string for [Keyv] library, or [Keyv] instance, or [Keyv] options. Default = `undefined` (in that case in-memory [Map] is used as a storage)
+- `with`?: ([Keyv] | [KeyvStoreAdapter] | [KeyvOptions] | [Map]): Keyv instance, or Keyv storage adapter, or Keyv options. Default = `undefined` (in that case Keyv uses in-memory [Map] as a storage)
 - `ttl`?: ([_number_]): TTL for stored value in milliseconds. Default = `undefined`
-
-## Gotchas
-
-[Keyv] is server-side library only (at least until [version 5](https://github.com/jaredwray/keyv/issues/868) is landed).
 
 ## FAQ
 
@@ -83,7 +85,7 @@ persist({
   store: $counter,
   key: 'counter',
   with: {
-    uri: 'redis://user:pass@localhost:6379',
+    store: new KeyvRedis({ uri: 'redis://user:pass@localhost:6379' }),
     serialize: JSON.stringify,
     deserialize: JSON.parse,
   },
@@ -93,10 +95,13 @@ persist({
 or use separate Keyv instance:
 
 ```javascript
-const keyv = new Keyv('redis://user:pass@localhost:6379', {
-  serialize: JSON.stringify,
-  deserialize: JSON.parse,
-})
+const keyv = new Keyv(
+  new KeyvRedis({ uri: 'redis://user:pass@localhost:6379' }),
+  {
+    serialize: JSON.stringify,
+    deserialize: JSON.parse,
+  }
+)
 
 persist({
   store: $counter,
@@ -107,9 +112,10 @@ persist({
 
 Please, read [Keyv] documentation for more details.
 
-[Map]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map
+[map]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map
 [keyv]: https://github.com/jaredwray/keyv
-[keyv.options]: https://github.com/jaredwray/keyv/tree/main/packages/keyv#api
+[keyvstoreadapter]: https://github.com/jaredwray/keyv/tree/main/packages/keyv#api
+[keyvoptions]: https://github.com/jaredwray/keyv/tree/main/packages/keyv#api
 [_subscription_]: https://effector.dev/docs/glossary#subscription
 [_store_]: https://effector.dev/docs/api/effector/store
 [_number_]: https://developer.mozilla.org/en-US/docs/Glossary/Number

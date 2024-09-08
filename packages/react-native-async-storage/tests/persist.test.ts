@@ -2,6 +2,8 @@ import { vi, expect, test } from 'vitest'
 import { createStore } from 'effector'
 import { adapter, persist } from '../src'
 
+declare let global: any
+
 // Mock AsyncStorage
 // @see https://react-native-async-storage.github.io/async-storage/docs/advanced/jest
 // this mock depends on global `jest` variable to define all methods using `jest.fn()`,
@@ -9,7 +11,7 @@ import { adapter, persist } from '../src'
 // so it cannot be mocked using `__mocks__` folder :(
 vi.mock('@react-native-async-storage/async-storage', async () => {
   // declare `vi` as global `jest` variable, so mock will call `vi.fn()` instead of `jest.fn()`
-  ;(global as any).jest = vi
+  global.jest = vi
   const AsyncStorageMock = await import(
     '@react-native-async-storage/async-storage/jest/async-storage-mock'
   )

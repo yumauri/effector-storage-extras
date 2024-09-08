@@ -1,11 +1,12 @@
 {
   "name": "@effector-storage/react-native-async-storage",
   "description": "Module for Effector to sync stores with ReactNative AsyncStorage",
-  "version": "1.1.0",
+  "version": "2.0.0",
   "keywords": [
     "react native asyncstorage",
     "react native async storage"
   ],
+  "type": "module",
   "scripts": {
     "build": "NODE_ENV=production rollup --config ../../rollup.config.mjs",
     "build:dev": "rollup --config ../../rollup.config.mjs",
@@ -19,6 +20,6 @@
     "size": "size-limit --highlight-less"
   },
   "dependencies": {
-    "@react-native-async-storage/async-storage": ">=1.18.0"
+    "@react-native-async-storage/async-storage": ">=2.0.0"
   }
 }

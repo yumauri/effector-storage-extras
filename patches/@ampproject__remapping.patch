@@ -1,0 +1,12 @@
+diff --git a/dist/remapping.mjs b/dist/remapping.mjs
+index f3875999c027f75f69e1b22f7d8fedb1eceef63e..be068054cbdc859b7a2a0002fb98ba9c2e6c1830 100644
+--- a/dist/remapping.mjs
++++ b/dist/remapping.mjs
+@@ -71,6 +71,7 @@ function traceMappings(tree) {
+  * child SourceMapTrees, until we find the original source map.
+  */
+ function originalPositionFor(source, line, column, name) {
++    if (!source) return null
+     if (!source.map) {
+         return SegmentObject(source.source, line, column, name, source.content, source.ignore);
+     }

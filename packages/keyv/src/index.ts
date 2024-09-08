@@ -5,8 +5,8 @@ import type {
   ConfigSourceTarget as BaseConfigSourceTarget,
   StorageAdapter,
 } from 'effector-storage'
+import type { Keyv, KeyvOptions, KeyvStoreAdapter } from 'keyv'
 import type { KeyvStorageConfig } from './adapter'
-import * as Keyv from 'keyv'
 import { persist as base } from 'effector-storage'
 import { keyv } from './adapter'
 
@@ -20,7 +20,7 @@ export type {
 export type { KeyvStorageConfig }
 
 export interface ConfigPersist extends BaseConfigPersist {
-  with?: string | Keyv.Store<any> | Keyv.Options<any>
+  with?: Keyv | KeyvStoreAdapter | KeyvOptions | Map<any, any>
   ttl?: number
 }
 
