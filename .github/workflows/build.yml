@@ -5,6 +5,8 @@ on:
     branches:
       - main
   pull_request:
+    branches:
+      - main
   workflow_dispatch:
 
 jobs:
@@ -18,7 +20,7 @@ jobs:
           - 22
           - 24
 
-    name: Node ${{ matrix.node-version }} / effector ${{ matrix.effector-version }}
+    name: Test and build w/node ${{ matrix.node-version }}
 
     steps:
       - name: 🛎️ Checkout
@@ -26,8 +28,11 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: 📦 Setup corepack
-        run: corepack enable
+      - name: 📦 Install pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 10.14.0
+          run_install: false
 
       - name: 🐧 Setup node ${{ matrix.node-version }}
         uses: actions/setup-node@v4
@@ -39,17 +44,17 @@ jobs:
       - name: 🔍 Install dependencies
         run: pnpm install --frozen-lockfile --ignore-scripts
 
-      - name: 👮 Lint
-        run: pnpm lint
+      - name: 👮 Lint sources
+        run: pnpm run lint
 
       - name: 🧪 Test
-        run: pnpm test
+        run: pnpm run test
 
       - name: 🔧 Build
-        run: pnpm build
+        run: pnpm run build
 
       - name: 👮 Lint package.json files
-        run: pnpm publint
+        run: pnpm run publint
 
       - name: 🔬 Check size
-        run: pnpm size
+        run: pnpm run size
