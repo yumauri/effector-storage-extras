@@ -10,12 +10,11 @@
   "scripts": {
     "build": "NODE_ENV=production rollup --config ../../rollup.config.mjs",
     "build:dev": "rollup --config ../../rollup.config.mjs",
-    "check:lint": "eslint src --config ../../eslint.config.mjs",
+    "check:biome": "biome check",
     "check:types": "tsc --noEmit",
-    "check:format": "prettier --check src",
     "lint": "pnpm run /^check:/",
     "publint": "pnpm dlx publint ../../build/packages/react-native-encrypted-storage",
-    "format": "prettier --write src",
+    "format": "biome format --verbose --write .",
     "test": "vitest run --coverage",
     "size": "size-limit --highlight-less"
   },

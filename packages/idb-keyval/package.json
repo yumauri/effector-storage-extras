@@ -11,12 +11,11 @@
   "scripts": {
     "build": "NODE_ENV=production rollup --config ../../rollup.config.mjs",
     "build:dev": "rollup --config ../../rollup.config.mjs",
-    "check:lint": "eslint src --config ../../eslint.config.mjs",
+    "check:biome": "biome check",
     "check:types": "tsc --noEmit",
-    "check:format": "prettier --check src",
     "lint": "pnpm run /^check:/",
     "publint": "pnpm dlx publint ../../build/packages/idb-keyval",
-    "format": "prettier --write src",
+    "format": "biome format --verbose --write .",
     "test": "vitest run --coverage",
     "size": "size-limit --highlight-less"
   },
@@ -24,7 +23,7 @@
     "idb-keyval": ">=6.0.0"
   },
   "devDependencies": {
-    "fake-indexeddb": "^6.0.0",
-    "idb": "^8.0.0"
+    "fake-indexeddb": "^6.1.0",
+    "idb": "^8.0.3"
   }
 }
