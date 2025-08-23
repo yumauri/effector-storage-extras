@@ -105,6 +105,6 @@ test('shoulh handle error from keyv', async () => {
     keyPrefix: '',
     operation: 'set',
   })
-  expect(error.context).toBe('symbol cannot be serialized')
+  expect(error.message).toBe('symbol cannot be serialized')
   expect(value).toBe(v)
 })
