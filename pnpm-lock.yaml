@@ -97,7 +97,7 @@ importers:
         specifier: ^6.0.0
         version: 6.1.0
       idb:
-        specifier: ^8.0.0
+        specifier: ^8.0.3
         version: 8.0.3
 
   packages/keyv:
