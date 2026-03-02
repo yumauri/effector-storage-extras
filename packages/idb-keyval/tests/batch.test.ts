@@ -1,7 +1,7 @@
 import 'fake-indexeddb/auto'
-import { vi, expect, test } from 'vitest'
 import { createStore } from 'effector'
 import { get, set, setMany } from 'idb-keyval'
+import { expect, test, vi } from 'vitest'
 import { persist } from '../src'
 
 vi.mock('idb-keyval', async (importOriginal) => {

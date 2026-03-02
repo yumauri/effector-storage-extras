@@ -1,5 +1,5 @@
-import { vi, expect, test } from 'vitest'
 import { createStore } from 'effector'
+import { expect, test, vi } from 'vitest'
 import { adapter, persist } from '../src'
 
 // Mock `react-native`.NativeModules.RNEncryptedStorage

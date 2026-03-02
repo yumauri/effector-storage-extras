@@ -1,6 +1,6 @@
-import { vi, expect, test } from 'vitest'
 import { createEvent, createStore } from 'effector'
 import Keyv from 'keyv'
+import { expect, test, vi } from 'vitest'
 import { adapter, persist } from '../src'
 
 async function tick(t = 10) {

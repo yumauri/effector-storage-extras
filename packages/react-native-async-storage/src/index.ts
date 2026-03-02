@@ -1,14 +1,14 @@
 import type { Subscription } from 'effector'
 import type {
   ConfigPersist as BaseConfigPersist,
-  ConfigStore as BaseConfigStore,
   ConfigSourceTarget as BaseConfigSourceTarget,
+  ConfigStore as BaseConfigStore,
   StorageAdapter,
 } from 'effector-storage'
-import { persist as base, asyncStorage } from 'effector-storage'
 import AsyncStorage, {
   createAsyncStorage,
 } from '@react-native-async-storage/async-storage'
+import { asyncStorage, persist as base } from 'effector-storage'
 
 export type {
   Done,

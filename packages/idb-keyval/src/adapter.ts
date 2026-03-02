@@ -1,6 +1,6 @@
 import type { StorageAdapter } from 'effector-storage'
 import type { UseStore } from 'idb-keyval'
-import { get, set, setMany, createStore } from 'idb-keyval'
+import { createStore, get, set, setMany } from 'idb-keyval'
 
 export interface IdbStorageConfig {
   timeout?: number

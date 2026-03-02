@@ -1,6 +1,6 @@
 import 'fake-indexeddb/auto'
-import { vi, expect, test } from 'vitest'
 import { createEvent, createStore } from 'effector'
+import { expect, test, vi } from 'vitest'
 import { persist } from '../src'
 
 async function tick(t = 10) {

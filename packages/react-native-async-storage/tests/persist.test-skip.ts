@@ -1,5 +1,5 @@
-import { vi, expect, test } from 'vitest'
 import { createStore } from 'effector'
+import { expect, test } from 'vitest'
 import { adapter, persist } from '../src'
 
 declare let global: any

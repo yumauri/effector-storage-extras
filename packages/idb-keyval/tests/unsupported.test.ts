@@ -1,6 +1,6 @@
-import { vi, expect, test } from 'vitest'
 import { createStore } from 'effector'
-import { persist, either, log } from 'effector-storage'
+import { either, log, persist } from 'effector-storage'
+import { expect, test, vi } from 'vitest'
 import { adapter } from '../src'
 
 test('should be nil adapter', async () => {

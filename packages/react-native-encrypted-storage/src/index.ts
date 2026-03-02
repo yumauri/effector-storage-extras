@@ -1,11 +1,11 @@
 import type { Subscription } from 'effector'
 import type {
   ConfigPersist as BaseConfigPersist,
-  ConfigStore as BaseConfigStore,
   ConfigSourceTarget as BaseConfigSourceTarget,
+  ConfigStore as BaseConfigStore,
   StorageAdapter,
 } from 'effector-storage'
-import { persist as base, asyncStorage } from 'effector-storage'
+import { asyncStorage, persist as base } from 'effector-storage'
 import EncryptedStorage from 'react-native-encrypted-storage'
 
 export type { Done, Fail, Finally, StorageAdapter } from 'effector-storage'

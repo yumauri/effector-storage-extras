@@ -1,8 +1,8 @@
 import type { Subscription } from 'effector'
 import type {
   ConfigPersist as BaseConfigPersist,
-  ConfigStore as BaseConfigStore,
   ConfigSourceTarget as BaseConfigSourceTarget,
+  ConfigStore as BaseConfigStore,
   StorageAdapter,
 } from 'effector-storage'
 import type { UseStore } from 'idb-keyval'

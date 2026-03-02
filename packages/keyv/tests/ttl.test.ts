@@ -1,6 +1,6 @@
-import { vi, expect, test, beforeEach, afterEach } from 'vitest'
 import { createStore } from 'effector'
 import Keyv from 'keyv'
+import { afterEach, beforeEach, expect, test, vi } from 'vitest'
 import { persist } from '../src'
 
 beforeEach(() => {
