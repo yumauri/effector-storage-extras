@@ -1,7 +1,7 @@
 {
   "name": "@effector-storage/keyv",
   "description": "Module for Effector to sync stores using Keyv",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "keywords": [
     "keyv"
   ],
