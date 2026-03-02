@@ -28,7 +28,7 @@ export function keyv({ with: keyv, ttl }: KeyvStorageConfig): StorageAdapter {
     },
 
     async set(value: State) {
-      return await store.set(key, value, ttl)
+      await store.set(key, value, ttl)
     },
   })
 

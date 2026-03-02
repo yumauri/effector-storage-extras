@@ -6,7 +6,9 @@ import type {
   StorageAdapter,
 } from 'effector-storage'
 import { persist as base, asyncStorage } from 'effector-storage'
-import AsyncStorage from '@react-native-async-storage/async-storage'
+import AsyncStorage, {
+  createAsyncStorage,
+} from '@react-native-async-storage/async-storage'
 
 export type {
   Done,
@@ -19,6 +21,7 @@ export type {
 export interface ConfigPersist extends BaseConfigPersist {}
 
 export interface AsyncStorageConfig {
+  databaseName?: string
   serialize?: (value: any) => string
   deserialize?: (value: string) => any
 }
@@ -41,8 +44,12 @@ export interface Persist {
  */
 adapter.factory = true as const
 export function adapter(config?: AsyncStorageConfig): StorageAdapter {
+  let storage: typeof AsyncStorage | undefined
   return asyncStorage({
-    storage: () => AsyncStorage,
+    storage: () =>
+      (storage ??= config?.databaseName
+        ? createAsyncStorage(config.databaseName)
+        : AsyncStorage),
     ...config,
   })
 }
